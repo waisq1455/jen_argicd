@@ -70,4 +70,11 @@ also for fetching password for argocd use this command
  kubectl -n argocd get secret argocd-initial-admin-secret \
           -o jsonpath="{.data.password}" | base64 -d; echo
 
+#### Docker Install on Jenkins VM###
+sudo apt install docker.io -y
+sudo chown jenkins:docker /var/run/docker.sock ----need to provide owenership  from root to jenkins user as the jenkins user has permission
+
+
+
+
 
