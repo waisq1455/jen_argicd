@@ -11,9 +11,11 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
+
         script {
             git branch: 'main', credentialsId: 'your-git-credentials', url: 'https://github.com/isakibshaikh1/jenkins-argocd.git'
         }
+        sh 'echo passed'
 
       }
     }
