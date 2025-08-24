@@ -22,7 +22,7 @@ pipeline {
 
         stage('Static Code Analysis') {
             environment {
-                SONAR_URL = "http://18.118.93.141:9000"
+                SONAR_URL = "http://34.207.119.228:9000"
             }
             steps {
                 withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
@@ -33,7 +33,7 @@ pipeline {
 
         stage('Build and Push Docker Image') {
             environment {
-                DOCKER_IMAGE = "wasiq1455/argocd-app:${BUILD_NUMBER}"
+                DOCKER_IMAGE = "aniq47/argocd-app:${BUILD_NUMBER}"
                 REGISTRY_CREDENTIALS = credentials('docker-cred')
             }
             steps {
