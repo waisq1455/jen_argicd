@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: wasiq1455/argicd-app:replaceIgameTag
+        image: wasiq1455/argocd-app:replaceImageTag
+
         ports:
         - containerPort: 8080
