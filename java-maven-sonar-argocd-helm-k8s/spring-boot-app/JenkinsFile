@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "aniq47/argocd-app:${BUILD_NUMBER}"
-        SONAR_URL = "http://54.242.246.230:9000"
+        SONAR_URL = "http://34.224.91.31:9000/"
         GIT_REPO_NAME = "jen_argicd"        // ✅ Corrected repo name
         GIT_USER_NAME = "waisq1455"         // ✅ Corrected GitHub username
     }
